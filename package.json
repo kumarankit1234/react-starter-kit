@@ -1,0 +1,23 @@
+{
+  "name": "react-starter-kit",
+  "version": "1.0.0",
+  "description": "A starter kit for react, webpack, hot reloading",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "starter",
+    "kit",
+    "hot",
+    "reloading"
+  ],
+  "author": "Ankit",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^2.0.15"
+  }
+}
