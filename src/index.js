@@ -1,3 +1,7 @@
 window.onload = function () {
-    console.log('I am here');
+    log();
+}
+
+const log = () => {
+    console.log("I am here");
 }
