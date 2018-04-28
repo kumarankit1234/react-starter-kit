@@ -27,6 +27,12 @@ module.exports = {
     },
 
     plugins: [
-        new HtmlWebpackPlugin({ template: './dist/index.html' })
-    ]
+        new HtmlWebpackPlugin({
+            // Use index.ejs because this plugin adds the script each time 
+            // with each webpack build, if passed an index.html file.
+            // todo-ank Need to figure out the reason for the same.
+            template: './src/index.ejs'
+        })
+    ],
+
 }
