@@ -1,8 +1,7 @@
-window.onload = function () {
-    log();
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const log = () => {
-    console.log("I am here");
-    console.log("You are here to");
-}
+ReactDOM.render(
+    <h1>Hello, world!</h1>,
+    document.getElementById('root')
+);
