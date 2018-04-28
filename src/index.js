@@ -4,4 +4,5 @@ window.onload = function () {
 
 const log = () => {
     console.log("I am here");
+    console.log("You are here to");
 }
