@@ -36,6 +36,9 @@ module.exports = {
     ],
 
     watch: true,
+
+    // For some systems, 
+    // watching many file systems can result in a lot of CPU or memory usage.
     watchOptions: {
         ignored: '/node_modules/'
     }
