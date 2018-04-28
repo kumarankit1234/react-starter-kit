@@ -19,6 +19,14 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
+            },
+            {
+                test: /\.css$/,
+
+                //todo-ank Find the exact usage of style loader.
+                // Adding just the css loader didn't help.
+                use: ['style-loader', 'css-loader']
+
             }
         ]
     },
