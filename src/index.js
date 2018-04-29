@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import printMe from './print';
 
+import Main from './components/Main';
+
 import './main.css';
 import './index.scss';
 
 ReactDOM.render(
-    <div onClick={printMe} className="main">
-        <div>Hello, yo!</div>
-        <div> YAY </div>
-    </div>,
-    document.getElementById('root')
+    <Main />, document.getElementById('root')
 );
+
+if (module.hot) {
+    module.hot.accept();
+}
