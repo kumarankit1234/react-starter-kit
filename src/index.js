@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import printMe from './print';
 
 import './main.css';
 
 ReactDOM.render(
-    <h1>Hello, universe!</h1>,
+    <h1 onClick={printMe}>Hello, yo!</h1>,
     document.getElementById('root')
 );

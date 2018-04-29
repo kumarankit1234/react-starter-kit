@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -37,13 +38,15 @@ module.exports = {
             // with each webpack build, if passed an index.html file.
             // todo-ank Need to figure out the reason for the same.
             template: './src/index.ejs'
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ],
 
     devServer: {
         contentBase: path.join(__dirname, "dist"),
         // Shows a full-screen overlay in the browser when there are compiler errors
-        overlay: true
-    }
+        overlay: true,
+        hot: true
+    },
 
 }
