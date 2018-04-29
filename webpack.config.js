@@ -40,12 +40,10 @@ module.exports = {
         })
     ],
 
-    watch: true,
-
-    // For some systems, 
-    // watching many file systems can result in a lot of CPU or memory usage.
-    watchOptions: {
-        ignored: '/node_modules/'
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        // Shows a full-screen overlay in the browser when there are compiler errors
+        overlay: true
     }
 
 }
