@@ -22,11 +22,19 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
+                test: /(\.css|\.scss|\.sass)$/,
 
                 //todo-ank Find the exact usage of style loader.
                 // Adding just the css loader didn't help.
-                use: ['style-loader', 'css-loader']
+                use: [{ loader: 'style-loader' }, {
+                    loader: 'css-loader', options: {
+                        sourceMap: true
+                    }
+                }, {
+                    loader: 'sass-loader', options: {
+                        sourceMap: true
+                    }
+                }]
 
             }
         ]
