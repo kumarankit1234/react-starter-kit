@@ -6,6 +6,9 @@ import './main.css';
 import './index.scss';
 
 ReactDOM.render(
-    <h1 onClick={printMe}>Hello, yo!</h1>,
+    <div onClick={printMe} className="main">
+        <div>Hello, yo!</div>
+        <div> YAY </div>
+    </div>,
     document.getElementById('root')
 );
