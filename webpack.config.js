@@ -8,7 +8,10 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main.bundle.js'
+        filename: 'main.bundle.js',
+        // The value of the option is prefixed to every URL created by the runtime or loaders.
+        // Because of this the value of this option ends with / in most cases.
+        publicPath: '/'
     },
 
     module: {
@@ -56,7 +59,10 @@ module.exports = {
         contentBase: path.join(__dirname, "dist"),
         // Shows a full-screen overlay in the browser when there are compiler errors
         overlay: true,
-        hot: true
+        hot: true,
+        // When using the HTML5 History API, the index.html page will likely have to be served in place of any 404 responses. 
+        // We can enable this by passing:
+        historyApiFallback: true
     },
 
 }
