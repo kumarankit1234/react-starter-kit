@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import printMe from './print';
-
+``
 import Main from './components/Main';
+import printMe from './print';
 
 import './main.css';
 import './index.scss';

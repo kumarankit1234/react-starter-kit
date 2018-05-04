@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+} from 'react-router-dom'
 
+import Home from './../Home';
+import About from './../About';
 
-class Main extends Component {
+const Main = () =>
+    <Router>
+        <div>
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+            </ul>
 
-    state = {
-        counter: 1
-    }
+            <hr />
 
-    componentDidMount() {
-        this.setState({
-            counter: 9
-        })
-    }
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+        </div>
+    </Router>
 
-    handleClick = () => {
-        this.setState((prevState) => {
-            return { counter: prevState.counter + 1 }
-        })
-    }
-
-
-    render() {
-        return <div className="main" onClick={this.handleClick}>I am Mai  {this.state.counter} </div>
-    }
-}
 
 module.exports = Main;
