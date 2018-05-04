@@ -4,7 +4,8 @@
   "description": "A starter kit for react, webpack, hot reloading",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [
     "react",
