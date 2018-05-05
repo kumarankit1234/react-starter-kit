@@ -10,3 +10,5 @@ This is causing one issue. When we are on some route say /about and we refresh t
 16. Added public path option in the output section of webpack config to always load the assets(Js file) from the root directory of the server. 
 
 17. Added separate config file for prod and dev build. Need to optimize the prod build. Reference: https://webpack.js.org/guides/production/
+
+18. Used webpack merge to separate the common config of dev and prod into a common file to avoid code duplication.
