@@ -7,6 +7,8 @@ module.exports = merge(common, {
     mode: 'production',
     plugins: [
         //Using this to minify the javascript
-        new UglifyJsPlugin()
+        new UglifyJsPlugin({
+            sourceMap: true
+        })
     ]
 })
