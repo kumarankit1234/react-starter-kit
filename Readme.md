@@ -14,3 +14,5 @@ This is causing one issue. When we are on some route say /about and we refresh t
 18. Used webpack merge to separate the common config of dev and prod into a common file to avoid code duplication.
 
 19. Used Uglijy Js Plugin to minify the production javascript build. Reference: https://github.com/mishoo/UglifyJS2/tree/harmony. The defaults options are well suited so i didn't pass any parameters to the plugin. This plugin does a lot of optimization to the code.
+
+20. Used Define plugin to define environment. The DefinePlugin allows you to create global constants which can be configured at compile time. This can be useful for allowing different behavior between development builds and release builds.
