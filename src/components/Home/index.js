@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Home extends Component {
     componentDidMount() {
-        const { store } = this.props;
+        const { store } = this.context;
         this.unsubscribe = store.subscribe(() => {
             this.forceUpdate();
         });
     }
 
     componentWillUnmount() {
-        const { store } = this.props;
+        const { store } = this.context;
         store.dispatch({
             type: 'DECREMENT'
         })
@@ -18,7 +19,7 @@ class Home extends Component {
 
     render() {
         debugger;
-        const { store } = this.props;
+        const { store } = this.context;
         return <div onClick={() => {
             store.dispatch({
                 type: 'INCREMENT'
@@ -27,5 +28,8 @@ class Home extends Component {
     }
 }
 
+Home.contextTypes = {
+    store: PropTypes.object
+}
 
 module.exports = Home;

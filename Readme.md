@@ -20,3 +20,5 @@ This is causing one issue. When we are on some route say /about and we refresh t
 21. Used redux methods to create a store, subscribe to it and update the component on change. Created a simple reducer for the same.
 
 22. Passed store as a props to the child component and created the store in the parent component.
+
+23. Used context to create a Provider component that passes the store to all its children and grandchildrens as context. So now we dont need to pass store explicitly to any child.

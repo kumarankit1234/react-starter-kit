@@ -1,14 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-``
+import { createStore } from 'redux';
+
 import Main from './components/Main';
 import printMe from './print';
+import Provider from './components/Provider';
 
 import './main.css';
 import './index.scss';
 
+
+const counter = (state = 0, action) => {
+
+    switch (action.type) {
+        case 'INCREMENT':
+            return state + 1;
+        case 'DECREMENT':
+            return state - 1;
+        default:
+            return state;
+
+    }
+}
+
+const store = createStore(counter);
+
+
 ReactDOM.render(
-    <Main />, document.getElementById('root')
+    <Provider store={store}>
+        <Main />
+    </Provider>, document.getElementById('root')
 );
 
 if (module.hot) {
