@@ -18,3 +18,5 @@ This is causing one issue. When we are on some route say /about and we refresh t
 20. Used Define plugin to define environment. The DefinePlugin allows you to create global constants which can be configured at compile time. This can be useful for allowing different behavior between development builds and release builds.
 
 21. Used redux methods to create a store, subscribe to it and update the component on change. Created a simple reducer for the same.
+
+22. Passed store as a props to the child component and created the store in the parent component.
