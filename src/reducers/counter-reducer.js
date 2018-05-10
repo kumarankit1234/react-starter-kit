@@ -1,4 +1,5 @@
-const counter = (state = 0, action) => {
+import initialState from './initial-state';
+const counter = (state = initialState.counter, action) => {
 
     switch (action.type) {
         case 'INCREMENT':

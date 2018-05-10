@@ -1,4 +1,5 @@
-const todos = (state = [], action) => {
+import initialState from './initial-state';
+const todos = (state = initialState.todoList, action) => {
 
     switch (action.type) {
         case 'ADD_TODO':

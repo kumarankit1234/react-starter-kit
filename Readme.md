@@ -30,3 +30,5 @@ This is causing one issue. When we are on some route say /about and we refresh t
 26. Moved the store creation logic to a separate file.
 
 27. Created one more component to be able to learn how to split reducers based on different keys of the state using the `Combine reducer.`.
+
+28. Created a separate file for the initial state of the app. 
