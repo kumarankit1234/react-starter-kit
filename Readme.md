@@ -24,3 +24,5 @@ This is causing one issue. When we are on some route say /about and we refresh t
 23. Used context to create a Provider component that passes the store to all its children and grandchildrens as context. So now we dont need to pass store explicitly to any child.
 
 24. Used Provider of react-redux instead of creating our own.
+
+25. The pattern of a component subscribing to store changes like our own Home Component is so common that react-redux has a HOC for the same. It's called `Connect`. Used it to create the Home component.

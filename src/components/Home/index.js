@@ -1,34 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-class Home extends Component {
-    componentDidMount() {
-        const { store } = this.context;
-        this.unsubscribe = store.subscribe(() => {
-            this.forceUpdate();
-        });
-    }
+const Home = ({ state, onClick }) => {
+    return (
+        <div onClick={onClick}>
+            {state}
+        </div>
+    )
 
-    componentWillUnmount() {
-        const { store } = this.context;
-        store.dispatch({
-            type: 'DECREMENT'
+}
+
+const mapStateToProps = (state) => ({
+    state
+})
+
+const mapDispatchToProps = (dispatch) => ({
+    onClick: () => {
+        dispatch({
+            type: 'INCREMENT'
         })
-        this.unsubscribe();
     }
+})
 
-    render() {
-        const { store } = this.context;
-        return <div onClick={() => {
-            store.dispatch({
-                type: 'INCREMENT'
-            })
-        }}> {store.getState()} </div>
-    }
-}
+const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(Home);
 
-Home.contextTypes = {
-    store: PropTypes.object
-}
-
-module.exports = Home;
+module.exports = HomeContainer;
