@@ -7,6 +7,7 @@ import {
 
 import Home from './../Home';
 import About from './../About';
+import TodoList from './../TodoList';
 
 const Main = () =>
     <Router>
@@ -14,6 +15,7 @@ const Main = () =>
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
+                <li><Link to="/todo">Todo</Link></li>
             </ul>
 
             <hr />
@@ -21,6 +23,7 @@ const Main = () =>
             <Route exact path="/" component={Home} />
 
             <Route path="/about" component={About} />
+            <Route path="/todo" component={TodoList} />
         </div>
     </Router>
 

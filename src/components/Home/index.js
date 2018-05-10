@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-const Home = ({ state, onClick }) => {
+const Home = ({ counter, onClick }) => {
     return (
         <div onClick={onClick}>
-            {state}
+            {counter}
         </div>
     )
 
 }
 
 const mapStateToProps = (state) => ({
-    state
+    counter: state.counter
 })
 
 const mapDispatchToProps = (dispatch) => ({
