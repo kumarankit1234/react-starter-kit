@@ -26,3 +26,5 @@ This is causing one issue. When we are on some route say /about and we refresh t
 24. Used Provider of react-redux instead of creating our own.
 
 25. The pattern of a component subscribing to store changes like our own Home Component is so common that react-redux has a HOC for the same. It's called `Connect`. Used it to create the Home component.
+
+26. Moved the store creation logic to a separate file.
