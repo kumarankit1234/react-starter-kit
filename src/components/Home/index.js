@@ -18,7 +18,6 @@ class Home extends Component {
     }
 
     render() {
-        debugger;
         const { store } = this.context;
         return <div onClick={() => {
             store.dispatch({

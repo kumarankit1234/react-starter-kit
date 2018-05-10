@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 import Main from './components/Main';
 import printMe from './print';
-import Provider from './components/Provider';
+
 
 import './main.css';
 import './index.scss';

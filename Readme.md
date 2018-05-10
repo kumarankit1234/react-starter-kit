@@ -22,3 +22,5 @@ This is causing one issue. When we are on some route say /about and we refresh t
 22. Passed store as a props to the child component and created the store in the parent component.
 
 23. Used context to create a Provider component that passes the store to all its children and grandchildrens as context. So now we dont need to pass store explicitly to any child.
+
+24. Used Provider of react-redux instead of creating our own.
