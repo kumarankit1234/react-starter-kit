@@ -14,6 +14,17 @@ const addLogging = (store) => {
     }
 }
 
+const addPromiseSupportToDispatch = (store) => {
+    const rawDispatch = store.dispatch;
+    return (action) => {
+        if (action.then === 'function') {
+            return action.then(rawDispatch);
+        }
+        return rawDispatch(action);
+    }
+}
+
 store.dispatch = addLogging(store);
+store.dispatch = addPromiseSupportToDispatch(store);
 
 export default store;

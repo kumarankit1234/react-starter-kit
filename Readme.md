@@ -34,3 +34,5 @@ This is causing one issue. When we are on some route say /about and we refresh t
 28. Created a separate file for the initial state of the app. 
 
 29. Wrapped the store dispatch to add custom logging. This is is route to learning middlewares in redux.
+
+30. Added one more wrapper around store to handle async params to dispatch.
