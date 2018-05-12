@@ -19,13 +19,13 @@
 
 # Each step took while making this project.
 
-1. Added a basic webpack confif just to add entry and output path of the bundle files.
+1. Added a basic webpack config just to add entry and output path of the bundle files.
 
 2. Added HTMLWebpackPlugin to automatically generate the html files with all the output js files added to it as a script tag.
 
 3. Added babel transpiler for ES6 code.
 
-4. Used inedx.ejs instead of index.html to prevent htmlwebpackplugin to add the same script multiple times on index.html.
+4. Used index.ejs instead of index.html to prevent htmlwebpackplugin to add the same script multiple times on index.html.
 
 5. Used watch to prevent running webpack build everytime after file change.
 
@@ -35,18 +35,18 @@
 
 8. Used css and style loader to include css in Jsx
 
-9. Removing webpack watch and using webpack-dev-server instead because watch require us to refresh browser each time we make any changes. webpack dev server automatically refreshes the
+9. Removed webpack watch and using webpack-dev-server instead because watch require us to refresh browser each time we make any changes. webpack dev server automatically refreshes the
 browser everytime there is any change and a new build is made. Need to figure out a way to prevent a full refresh because the app may lose state if using react/redux on full refresh
 
 10. Used sass loader for sass files.
 
 11. Used postcss loader and its autoprefixer plugin to add prefix to css for all browser support.
 
-12. Used react component. Added module.hot check for react component for supporting hmr. Uses bable plugin transform to use class property.
+12. Used react component. Added module.hot check for react component for supporting hmr. Used babel plugin transform to use class property.
 
 13. Used the router v4 to make routes on the client side. It allows declarative routing, so we dont need to have a whole routes file at one place in our application. We can add routes inside any component.
 Reference: https://reacttraining.com/react-router/core/guides/philosophy.
-This is causing one issue. When we are on some route say /about and we refresh the browser then we we a 404 not found error. The network call says that the main.bundle.js that is being fetched from the server is from the route /home/main.bundle.js and this route does not exist on the dev server. Need to figure out a way to fix this. 
+This is causing one issue. When we are on some route say /about and we refresh the browser then we get a 404 not found error. The network call says that the main.bundle.js that is being fetched from the server is from the route /home/main.bundle.js and this route does not exist on the dev server. Need to figure out a way to fix this. 
 
 14. Added public path option in the output section of webpack config to always load the assets(Js file) from the root directory of the server. 
 
