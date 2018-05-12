@@ -1,8 +1,5 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
-
-
-const store = createStore(reducers);
 
 const addLogging = (store) => (next) => (action) => {
     console.log(store.getState());
@@ -28,13 +25,7 @@ const addPromiseSupportToDispatch = (store) => (next) => (action) => {
     return next(action);
 
 }
-
-const wrapDispatchWithMiddlewares = (store, middlewares) => {
-    middlewares.slice().reverse().forEach(middleware => {
-        store.dispatch = middleware(store)(store.dispatch);
-    })
-}
 const middlewares = [addPromiseSupportToDispatch, addLogging, addLogging2];
-wrapDispatchWithMiddlewares(store, middlewares);
+const store = createStore(reducers, applyMiddleware(...middlewares));
 
 export default store;

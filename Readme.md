@@ -38,3 +38,5 @@ This is causing one issue. When we are on some route say /about and we refresh t
 30. Added one more wrapper around store to handle async params to dispatch.
 
 31. Created a middlewares function that execute all the middleware. 
+
+32. Used redux method applyMiddlewares and passed it as an enhancer param to createStore.
