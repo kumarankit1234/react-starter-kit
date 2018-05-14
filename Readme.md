@@ -1,12 +1,12 @@
-
-
-
-
-
 # Getting started
 
-1. For dev build with webpack dev server user: `yarn start`
-2. For production build use: `yarn build`.
+1. git clone https://github.com/kumarankit1234/react-starter-kit.git .
+2. If you want to remove the git history then do rm -rf .git .
+3. cd react-starter-kit. 
+3. For dev build with webpack dev server use: `yarn start`
+4. For production build use: `yarn build`.
+
+
 
 # Features
 1. Development server using webpack dev server.
